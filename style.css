@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	color: #383838;
+}
+
+.hidden{
+	display:none!important;
+}
+
+.cards{
+	width: 100%;
+}
+
+.card > h1{
+	font-weight: 800!important;
+}
+.card > h5{
+	font-weight: 200!important;
+}
+.card-casos{
+background-color: #f1a209;
+color: #FFF;
+}
+.card-mortes{
+background-color: red;
+color: #FFF;
+}
+.card-recuperados{
+background-color: green;
+color: #FFF;
+}
+
+.card-status{
+	width: 20vw;
+	border-radius: 15px;
+	padding:15px;
+	margin:15px;
+	padding-top:30px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+/* alert */
+.alerta {
+	position:absolute;
+	top:100px;
+	width: 100%;
+	display: block;
+	  padding: 10px;
+	  background-color: #f1a209;
+	  color: white;
+	  z-index: 99999;
+	  transition: 0.3s;
+
+	}
+	
+	.closebtn {
+	  margin-left: 15px;
+	  color: white;
+	  font-weight: bold;
+	  float: right;
+	  font-size: 22px;
+	  line-height: 20px;
+	  cursor: pointer;
+	  transition: 0.3s;
+	}
+	
+	.closebtn:hover {
+	  color: black;
+	}
+	/* end of alert */
+
+.header {
+	overflow: hidden;
+	background-color: #FFF;
+	padding: 20px 10px;
+  }
+  
+  .header img{
+	width: 150px;
+  }
+  .header a {
+	/* uncomment this if need logo align to left */
+	/* float: left;*/  
+	color: black;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px; 
+	line-height: 25px;
+	border-radius: 4px;
+  }
+  
+  .header a.logo {
+	font-size: 25px;
+	font-weight: bold;
+	padding: 0;
+	/* margin-left: 25px; */
+  }
+  .logo{
+	text-align: center;
+  }
+  .header a:hover {
+	/* background-color: #ddd; */
+	color: black;
+  }
+  
+  .header a.active {
+	background-color: #3700b3;
+	color: white;
+  }
+  
+  .header-right {
+	float: right;
+	margin-right: 25px;
+	margin-top: 5px;
+  }
+  
+  @media screen and (max-width: 500px) {
+	.header a {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	}
+	.card-status{
+		width: 100%;
+	}
+	.header-right {
+	  float: none;
+	}
+  }
+
+.heading {
+	background: #263238;
+	padding: 18px;
+	color: white;
+}
+h1 {
+	font-size: 24px;
+	text-align: center;
+	margin: 0 0 6px;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+h2 {
+	font-size: 18px;
+	text-align: center;
+	font-weight: 400;
+}
+
+.control-panel {
+	z-index: 99999;
+	background: #3700b3;
+	color: #FFF;
+	padding: 12px;
+	font-size: 0.8em;
+	position: sticky;
+	top: 0;
+}
+.control-panel-inner {
+	display: flex;
+	justify-content: space-around;
+	width: 300px;
+	margin: auto;
+}
+.control-panel .sort-by {
+	font-weight: 700;
+	display: none;
+}
+.control-panel input {
+	margin-right: 3px;
+}
+.alphabet {
+	z-index: 99999;
+	padding: 4px;
+	position: sticky;
+	top: 42px;
+	background: #33079B;
+}
+.alphabet-inner {
+	width: 320px;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+}
+.alphabet .div {
+/* 	display: inline-block; */
+}
+.alphabet a {
+	font-size: 0.8em;
+	text-decoration: none;
+	color: #FFF;
+}
+
+.container {
+	width: 300px;
+	margin: 24px auto;
+}
+.country {
+	border: 1px solid #546E7A;
+	margin: 20px 0;
+	border-radius: 4px;
+	box-shadow: 3px 3px 5px #ccc;
+	width: 300px;
+	font-size: 0.9em;
+}
+.sombra{
+	-webkit-box-shadow: 0px 17px 20px -15px rgba(0,0,0,0.20); 
+	box-shadow: 0px 17px 20px -15px rgba(0,0,0,0.20);
+}
+/* .header {
+	background: #607D8B;
+	color: white;
+	padding: 4px 8px;
+	border-radius: 3px 3px 0 0;
+} */
+.content {
+	padding: 4px 8px;
+	margin-top: 20px;
+}
+.yd {
+	color: gray;
+	font-size: 0.8em;
+	padding-left: 6px;
+}
+.change {
+	color: gray;
+	font-size: 0.8em;
+	padding-left: 6px;
+}
+
+/* TABELA */
+
+.container-table{
+margin: auto;
+width: 80%;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+	min-width: 320px;
+	margin-bottom: 40px;
+  }
+/* table tbody tr:nth-child(even){background-color: #f2f2f2;} */
+
+table tbody tr {
+	border: solid #e8e8e8;
+	border-width: 0 0 1px;
+}
+table tbody tr:hover {
+	background-color: #f1a209;
+	color: #FFF;
+	font-weight: 600;
+}
+  
+  @media screen and (max-width: 576px) {
+table thead,
+table tbody,
+table th,
+table td,
+table tr {
+	  display: block;
+	}
+	.card-status{
+		width: 100%;
+	}
+  }
+table > thead {
+	background-color: #e8ecf1;
+	color: #383838;
+	font-weight: 800;
+  }
+  @media screen and (max-width: 576px) {
+table > thead {
+	  display: none;
+	}
+	.card-status{
+		width: 100%;
+	}
+  }
+table > thead > tr > th {
+	text-align: left;
+	font-size: 18px;
+  }
+table > thead > tr > th:not(:first-child) {
+	text-align: right;
+  }
+  @media screen and (max-width: 576px) {
+table td:nth-of-type(1)::before {
+	  content: "Country";
+	}
+table td:nth-of-type(2)::before {
+	  content: "Cases";
+	}
+table td:nth-of-type(3)::before {
+	  content: "Deaths";
+	}
+table td:nth-of-type(4)::before {
+	  content: "Recovered";
+	}
+  }
+table th,
+table td {
+	/* border: 1px solid #696969; */
+	padding: 9px 15px;
+	white-space: nowrap;
+  }
+table > tbody > tr > td {
+	font-size: 16px;
+  }
+table > tbody > tr > td img {
+	width: 24px;
+	height: 24px;
+	border-radius:50%;
+	vertical-align: baseline;
+	margin-right: 10px;
+	position: relative;
+	top:5px;
+  }
+  @media screen and (max-width: 576px) {
+table > tbody > tr > td {
+	  position: relative;
+	  text-align: right;
+	}
+table > tbody > tr > td:first-child {
+	  background-color: #181818;
+	  padding-left: 100px;
+	  white-space: normal;
+	}
+table > tbody > tr > td::before {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  padding: 9px 15px;
+	  white-space: nowrap;
+	}
+	.card-status{
+		width: 100%;
+	}
+  }
+/* table > tbody > tr > td:not(:first-child) {
+	text-align: left;
+  } */
+
+@media only screen and (min-width: 640px) {
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		width: 640px;
+	}
+	.country {
+		margin: 10px;
+	}
+	.control-panel-inner { width: 400px;}
+	.control-panel .sort-by { display: block; }
+	
+}
+
+@media only screen and (min-width: 960px) {
+	.container {
+		width: 960px;
+	}
+	
+}

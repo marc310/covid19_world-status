@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Covid-19 latest data</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+	
+	<div class="header">
+		<div class="logo">
+		  <a href="#default" class="logo">
+			<img src="src/logo/african-computational-sciences.png" alt="African Computational Sciences">
+		  </a>
+		</div>
+	</div>
+
+	
+
+
+	<div class="container-fluid">
+		<div class="alerta text-center" id="divalerta">
+			<span class="closebtn" onclick="closeAlert()">&times;</span> 
+			<h1><strong>corona</strong>virus disease (<strong>covid-19</strong>)
+			</h1>
+			<h2>Covid-19 latest data: <span id="date"></span> </h2>
+		</div>
+		<script>
+			window.onload = function() {
+
+				var controlPanel = document.querySelector('.control-panel');
+				var divalerta = document.querySelector('#divalerta');
+				controlPanel.style.marginTop = '90px';
+
+			};
+
+				function closeAlert(){
+					var controlPanel = document.querySelector('.control-panel');
+					var divalerta = document.querySelector('#divalerta');
+					divalerta.style.display = 'none';
+					controlPanel.style.marginTop = '0px';
+				}
+		</script>
+	</div>
+
+<!-- partial:index.partial.html -->
+<!-- <div class="heading">
+	<h1>Covid-19 latest data</h1>
+	<h2 id="date"></h2>
+</div> -->
+<div class="control-panel">
+	<div class="control-panel-inner">
+		<div class="sort-by">Sort by:</div>
+		<div>
+			<input type="radio" id="country" name="sort-order" value="country" checked>
+			<label for="country">Country</label>
+		</div>
+		<div>
+			<input type="radio" id="cases" name="sort-order" value="cases">
+			<label for="cases">Cases</label>
+		</div>
+		<div>
+			<input type="radio" id="deaths" name="sort-order" value="deaths">
+			<label for="deaths">Deaths</label>
+		</div>
+		<div>
+			<input type="radio" id="recovered" name="sort-order" value="recovered">
+			<label for="recovered">Recovered</label>
+		</div>
+	</div>
+</div>
+<div class="alphabet">
+	<div class="alphabet-inner"></div>
+</div>
+
+<div class="container" id="cards">
+		
+</div>
+
+<div class="container-table">
+<div class="content">
+	<div class="table">
+
+		<table id="covid-table">
+			<thead>
+				<tr>
+					<td>Country</td>
+					<td>Cases</td>
+					<td>Deaths</td>
+					<td>Recovered</td>
+				</tr>
+			</thead>
+			<tbody id="content-tabela" class="body-tabela">
+				
+			</tbody>
+		</table>
+	
+	</div>
+		<div class="content" id="totais">
+			<div id="casosTotais"></div>
+			<div id="mortesTotais"></div>
+			<div id="recuperadosTotais"></div>
+		</div>
+</div>
+</div>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
